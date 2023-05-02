@@ -36,4 +36,19 @@
 
     firstNameEl.value = 'Андрей';
 
+    window.alert(lastNameEl.className);
+
+    lastNameEl.setAttribute('class', 'error-input');
+
 </script>
+
+<style>
+    .default-input {
+        border: green 5px solid;
+        padding: 5px;
+    }
+
+    .error-input {
+        border-color: red;
+    }
+</style>
