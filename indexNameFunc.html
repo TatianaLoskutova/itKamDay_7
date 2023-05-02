@@ -1,4 +1,4 @@
-<input value='Tanya' class='first-name-input default-input' id='first-name'/>
+<input value='Tanya' title='Enter your name' class='first-name-input default-input' id='first-name'/>
 <input value='Loskutova' class='last-name-input default-input' id='last-name'/>
 <input value='Spb' class='address-input default-input' id='address'/>
 
@@ -38,11 +38,23 @@
 
     window.alert(lastNameEl.className);
 
-    lastNameEl.setAttribute('class', 'error-input');
+    lastNameEl.setAttribute('class', 'last-name-input default-input error-input');
+    lastNameEl.title = 'Wrong last name';
+    avatarEl.src = 'https://avatars.mds.yandex.net/i?id=2a00000179fc1ceb9bc245930ab6dd819355-4236087-images-thumbs&n=13';
+    avatarEl.title = 'Roma'; // когда мышкой на картинку наводищь видно это название
+    cities.value = 'Moscow';
+    hobbiesEl.value = 'I have not interested';
+    avatarWrapperEl.innerHTML = '<ul id ="list"><li>1</li><li>2</li></ul>';
+
+    let listId = 'list'
+    let numberList = document.getElementById(listId);
+
+    window.alert(numberList.innerHTML);
 
 </script>
 
 <style>
+
     .default-input {
         border: green 5px solid;
         padding: 5px;
